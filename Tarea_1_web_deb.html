@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo de validación</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script>
+      function validar_datos_generales(){
+        //Validar nombre
+        if (document.formValida.nombre.value.length <= 5){
+          alert("Ingrese un nombre valido.")
+          document.formValida.nombre.focus()
+          return 0;
+        }
+       
+       //Validar fecha de nacimiento
+       if (document.formValida.Fecha_de_nacimiento.value.length <= 5){
+          alert("Ingrese una fecha valida.")
+          document.formValida.Fecha_de_nacimiento.focus()
+          return 0;
+        }
+
+        //Validar dirección
+        if (document.formValida.dirección.value.length <= 5){
+          alert("Ingrese un dirección valido.")
+          document.formValida.dirección.focus()
+          return 0;
+        }
+
+        //Validar teléfono
+        if (document.formValida.teléfono.value.length <= 5){
+          alert("Ingrese un teléfono valido.")
+          document.formValida.teléfono.focus()
+          return 0;
+        }
+
+        //Validar sexo
+        if (document.formValida.sexo.value.length <= 5){
+          alert("Ingrese un sexo valido.")
+          document.formValida.sexo.focus()
+          return 0;
+        }
+                
+        //Envia formulario
+        alert("Muchas gracias por enviar el formulario");
+        document.formValida.submit();
+      }
+
+      function validar_tarjeta(){
+
+        if (document.formValida2.nombre_del_titular.value.length <= 5){
+          alert("Ingrese un nombre valido.")
+          document.formValida2.nombre_del_titular.focus()
+          return 0;
+        }
+
+        if (document.formValida2.vencimiento.value.length <= 5){
+          alert("Ingrese una fecha valida.")
+          document.formValida2.vencimiento.focus()
+          return 0;
+        }
+
+        if (document.formValida2.código_de_seguridad.value.length <= 5){
+          alert("Ingrese un nombre valido.")
+          document.formValida2.código_de_seguridad.focus()
+          return 0;
+        }
+
+        alert("Muchas gracias por enviar el formulario de tarjeta");
+        document.formValida2.submit();
+      }
+    </script> 
+  </head>
+  <body>
+    <form class="contact_form" name="formValida">
+      <table>
+        <tr>
+          <th>Nombre:</th>
+          <td><input type="text" name="nombre" size="30" maxlength="100"></td>
+        </tr>
+
+        <tr>
+            <th>Fecha de nacimiento:</th>
+            <td><input type="text" name="Fecha_de_nacimiento" size="30" maxlength="100"></td>
+        </tr>
+
+        <tr>
+            <th>Dirección:</th>
+            <td><input type="text" name="dirección" size="30" maxlength="100"></td>
+        </tr>
+
+        <tr>
+            <th>Teléfono:</th>
+            <td><input type="text" name="teléfono" size="30" maxlength="100"></td>
+        </tr>
+
+        <tr>
+            <th>sexo:</th>
+            <td><input type="text" name="sexo" size="30" maxlength="100"></td>
+        </tr>
+          <td colspan="2" align="center">
+            <input type="button" value="Enviar" onclick="validar_datos_generales();">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <form class="contact_form" name="formValida2">
+        <table>
+          <tr>
+            <th>Nombre del titular:</th>
+            <td><input type="text" name="nombre_del_titular" size="30" maxlength="100"></td>
+          </tr>
+  
+          <tr>
+              <th>Fecha de vencimiento:</th>
+              <td><input type="text" name="vencimiento" size="30" maxlength="100"></td>
+          </tr>
+  
+          <tr>
+              <th>Código de seguridad:</th>
+              <td><input type="text" name="código_de_seguridad" size="30" maxlength="100"></td>
+          </tr>
+            <td colspan="2" align="center">
+              <input type="button" value="Enviar" onclick="validar_tarjeta();">
+            </td>
+          </tr>
+        </table>
+      </form>
+
+  </body>
+</html>
